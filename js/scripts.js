@@ -1,16 +1,26 @@
-// scripts.js
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
     const slides = document.querySelector('.slides');
-    const images = slides.querySelectorAll('img');
-    let index = 0;
+    const images = document.querySelectorAll('.slides img');
 
-    function showNextImage() {
-        index++;
-        if (index >= images.length) {
-            index = 0;
-        }
-        slides.style.transform = `translateX(-${index * 100 / images.length}%)`;
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        slides.style.transition = 'transform 0.5s ease-in-out';
+        slides.style.transform = `translateX(${-index * 20}%)`;
     }
 
-    setInterval(showNextImage, 3000); // Cambia la imagen cada 3 segundos
+    function nextSlide() {
+        if (currentIndex === images.length - 1) {
+            currentIndex = 0;
+            setTimeout(() => {
+                slides.style.transition = 'none';
+                showSlide(currentIndex);
+            }, 0); // Ajusta el tiempo de espera para que se aplique inmediatamente
+        } else {
+            currentIndex++;
+            showSlide(currentIndex);
+        }
+    }
+
+    setInterval(nextSlide, 3000);
 });
