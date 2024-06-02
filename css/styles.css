@@ -74,13 +74,12 @@ a:hover {
 
 .slides {
     display: flex;
-    width: calc(100% * 5); /* Asegúrate de que es lo suficientemente grande para todas las imágenes */
+    width: 500%; /* Ajusta esto según el número de imágenes */
     transition: transform 0.5s ease-in-out;
 }
 
 .slides img {
-    width: 100%;
-    height: 100%;
+    width: 20%; /* Cada imagen ocupa el 20% del contenedor para 5 imágenes */
+    height: auto;
     object-fit: contain; /* Mantén la proporción de las imágenes sin recortarlas */
-    display: block;
 }
