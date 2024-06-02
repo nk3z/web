@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const slides = document.querySelector('.slides');
     const images = document.querySelectorAll('.slides img');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
 
     let currentIndex = 0;
 
@@ -15,12 +17,28 @@ document.addEventListener('DOMContentLoaded', function () {
             setTimeout(() => {
                 slides.style.transition = 'none';
                 showSlide(currentIndex);
-            }, 0); // Ajusta el tiempo de espera para que se aplique inmediatamente
+            }, 0);
         } else {
             currentIndex++;
             showSlide(currentIndex);
         }
     }
 
+    function prevSlide() {
+        if (currentIndex === 0) {
+            currentIndex = images.length - 1;
+            setTimeout(() => {
+                slides.style.transition = 'none';
+                showSlide(currentIndex);
+            }, 0);
+        } else {
+            currentIndex--;
+            showSlide(currentIndex);
+        }
+    }
+
     setInterval(nextSlide, 3000);
+
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
 });

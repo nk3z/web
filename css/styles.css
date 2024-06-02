@@ -75,11 +75,32 @@ a:hover {
 .slides {
     display: flex;
     width: 500%; /* Ajusta esto según el número de imágenes */
-    transition: transform 0.5s ease-in-out;
+    transition: transform 10s ease-in-out;
 }
 
 .slides img {
     width: 20%; /* Cada imagen ocupa el 20% del contenedor para 5 imágenes */
     height: auto;
     object-fit: contain; /* Mantén la proporción de las imágenes sin recortarlas */
+}
+
+/* Botones de flecha */
+.slider .prev, .slider .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 100;
+}
+
+.slider .prev {
+    left: 0;
+}
+
+.slider .next {
+    right: 0;
 }
