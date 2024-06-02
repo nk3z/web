@@ -1,10 +1,9 @@
-/* styles.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #2b2b2b; /* Fondo negro mate */
-    color: #ffffff; /* Texto blanco */
+    color: #ffffff; /* Color Texto */
 }
 
 .header {
@@ -64,8 +63,19 @@ a:hover {
 }
 
 .education-image {
-    max-width: 100%;
-    height: auto;
     display: block;
-    margin: 20px 0;
+    margin: 20px auto;
+    width: 50%; /* Ajusta el tamaño de la imagen */
+    height: auto;
+}
+
+.glori-image {
+    display: block;
+    margin: 20px auto;
+    width: 50%; /* Ajusta el tamaño de la imagen */
+    height: auto;
+}
+video {
+    margin-top: 20px;
+    width: 90%;
 }
