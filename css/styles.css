@@ -69,12 +69,6 @@ a:hover {
     height: auto;
 }
 
-.glori-image {
-    display: block;
-    margin: 20px auto;
-    width: 50%; /* Ajusta el tamaño de la imagen */
-    height: auto;
-}
 video {
     margin-top: 20px;
     width: 90%;
