@@ -1,3 +1,4 @@
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -63,13 +64,8 @@ a:hover {
 }
 
 .education-image {
-    display: block;
-    margin: 20px auto;
-    width: 50%; /* Ajusta el tamaño de la imagen */
+    max-width: 100%;
     height: auto;
-}
-
-video {
-    margin-top: 20px;
-    width: 90%;
+    display: block;
+    margin: 20px 0;
 }
