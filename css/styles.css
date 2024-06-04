@@ -1,54 +1,68 @@
 /* styles.css */
 body {
-    font-family: 'Roboto', sans-serif; /* Fuente moderna */
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #2b2b2b; /* Fondo negro mate */
-    color: #ffffff; /* Texto blanco */
+    background-color: #2b2b2b;
+    color: #ffffff;
     text-align: left;
 }
 
 .header {
-    position: fixed; /* Hace que la barra de encabezado sea fija */
-    top: 0; /* Se fija en la parte superior */
-    left: 0; /* Se fija a la izquierda */
-    width: 100%; /* Ancho completo */
+    position: relative; /* Cambiado a relative para posicionar elementos dentro */
+    width: 100%;
     background-color: #333;
+    z-index: 1000;
+}
+
+.header .cover-image {
+    width: 100%;
+    height: 300px; /* Altura de la imagen de cabecera */
+    object-fit: cover;
+    position: absolute; /* Para que la imagen no empuje el contenido hacia abajo */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Imagen detrás del contenido del header */
+}
+
+.header nav {
+    position: relative;
+    z-index: 1; /* Asegura que el nav esté encima de la imagen */
     padding: 10px 20px;
-    display: flex; /* Utiliza Flexbox */
-    justify-content: space-between; /* Distribuye los elementos horizontalmente */
-    align-items: center; /* Centra verticalmente los elementos */
-    z-index: 1000; /* Para asegurarse de que la barra esté por encima del contenido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(51, 51, 51, 0.8); /* Fondo semi-transparente para mejor legibilidad */
 }
 
 .header ul, .header nav ul {
-    list-style-type: none; /* Elimina los puntos de la lista */
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
 .header ul li, .header nav ul li {
-    display: inline; /* Muestra los elementos en línea */
-    margin-right: 20px; /* Añade un espacio entre los elementos */
+    display: inline;
+    margin-right: 20px;
 }
 
 .header ul li:last-child {
-    margin-right: 0; /* No añade margen al último elemento */
+    margin-right: 0;
 }
 
 .header a, .header nav ul li a {
-    color: #ffffff; /* Cambia el color de los enlaces a blanco */
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    transition: color 0.3s ease; /* Añade una transición suave para el color */
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .header a:hover, .header nav ul li a:hover {
-    color: #1e90ff; /* Color azul para el hover */
+    color: #1e90ff;
 }
 
 .container {
     max-width: 800px;
-    margin: 70px auto 20px; /* Añade margen superior para compensar la barra fija */
+    margin: 320px auto 20px; /* Añade margen superior para compensar la imagen de cabecera */
     padding: 20px;
 }
 
@@ -61,42 +75,41 @@ section {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #ffffff; /* Texto blanco */
-    font-weight: 700; /* Negrita para los encabezados */
+    color: #ffffff;
+    font-weight: 700;
 }
 
 a {
-    color: #1e90ff; /* Color azul para los enlaces */
+    color: #1e90ff;
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline; /* Subrayado al pasar el cursor por encima */
+    text-decoration: underline;
 }
 
 .slider {
     position: relative;
     width: 100%;
-    height: 400px; /* Ajusta la altura según sea necesario */
+    height: 400px;
     overflow: hidden;
     margin: 20px 0;
 }
 
 .slides {
     display: flex;
-    width: 500%; /* Ajusta esto según el número de imágenes */
+    width: 500%;
     transition: transform 0.5s ease-in-out;
 }
 
 .slides img {
-    width: 20%; /* Cada imagen ocupa el 20% del contenedor para 5 imágenes */
+    width: 20%;
     height: auto;
-    object-fit: contain; /* Mantén la proporción de las imágenes sin recortarlas */
+    object-fit: contain;
     display: block;
     margin: 0 auto;
 }
 
-/* Botones de flecha */
 .slider .prev, .slider .next {
     position: absolute;
     top: 50%;
@@ -118,9 +131,9 @@ a:hover {
 }
 
 video {
-    display: block; /* Para que los videos se comporten como bloques */
-    margin: 20px auto; /* Centrado horizontalmente */
-    max-width: 100%; /* Asegura que los videos no excedan el ancho del contenedor */
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
 }
 
 .softwares-logos {
@@ -128,8 +141,8 @@ video {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas */
-    justify-content: center; /* Centra los elementos horizontalmente */
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .softwares-logos li {
@@ -151,19 +164,18 @@ video {
 #education img {
     width: 200px;
     height: auto;
-    margin: 0 10px; /* Espacio a los lados de la imagen */
+    margin: 0 10px;
 }
 
 footer {
-    text-align: center; /* Centra el texto en el pie de página */
+    text-align: center;
     padding: 20px 0;
     background-color: #333;
     color: #ffffff;
     margin-top: 40px;
 }
 
-/* Añadido para un diseño minimalista */
 .container p {
-    line-height: 1.6; /* Espaciado entre líneas para mejor legibilidad */
-    margin-bottom: 20px; /* Espaciado entre párrafos */
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
