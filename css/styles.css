@@ -1,10 +1,11 @@
 /* styles.css */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Fuente moderna */
     margin: 0;
     padding: 0;
     background-color: #2b2b2b; /* Fondo negro mate */
     color: #ffffff; /* Texto blanco */
+    text-align: left;
 }
 
 .header {
@@ -20,13 +21,13 @@ body {
     z-index: 1000; /* Para asegurarse de que la barra esté por encima del contenido */
 }
 
-.header ul {
+.header ul, .header nav ul {
     list-style-type: none; /* Elimina los puntos de la lista */
     margin: 0;
     padding: 0;
 }
 
-.header ul li {
+.header ul li, .header nav ul li {
     display: inline; /* Muestra los elementos en línea */
     margin-right: 20px; /* Añade un espacio entre los elementos */
 }
@@ -35,8 +36,14 @@ body {
     margin-right: 0; /* No añade margen al último elemento */
 }
 
-.header a {
+.header a, .header nav ul li a {
     color: #ffffff; /* Cambia el color de los enlaces a blanco */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    transition: color 0.3s ease; /* Añade una transición suave para el color */
+}
+
+.header a:hover, .header nav ul li a:hover {
+    color: #1e90ff; /* Color azul para el hover */
 }
 
 .container {
@@ -45,25 +52,28 @@ body {
     padding: 20px;
 }
 
+main {
+    margin-top: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
 h1, h2, h3, h4, h5, h6 {
     color: #ffffff; /* Texto blanco */
+    font-weight: 700; /* Negrita para los encabezados */
 }
 
 a {
-    color: #1e90ff;
+    color: #1e90ff; /* Color azul para los enlaces */
     text-decoration: none;
 }
 
 a:hover {
-    color: #ff4500;
+    text-decoration: underline; /* Subrayado al pasar el cursor por encima */
 }
 
-#canvas-container {
-    width: 100%;
-    height: 400px;
-}
-
-/* Estilos del slider */
 .slider {
     position: relative;
     width: 100%;
@@ -75,13 +85,15 @@ a:hover {
 .slides {
     display: flex;
     width: 500%; /* Ajusta esto según el número de imágenes */
-    transition: transform 10s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .slides img {
     width: 20%; /* Cada imagen ocupa el 20% del contenedor para 5 imágenes */
     height: auto;
     object-fit: contain; /* Mantén la proporción de las imágenes sin recortarlas */
+    display: block;
+    margin: 0 auto;
 }
 
 /* Botones de flecha */
@@ -103,4 +115,55 @@ a:hover {
 
 .slider .next {
     right: 0;
+}
+
+video {
+    display: block; /* Para que los videos se comporten como bloques */
+    margin: 20px auto; /* Centrado horizontalmente */
+    max-width: 100%; /* Asegura que los videos no excedan el ancho del contenedor */
+}
+
+.softwares-logos {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas */
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+.softwares-logos li {
+    margin: 10px;
+}
+
+.softwares-logos img {
+    height: 32px;
+    width: auto;
+}
+
+#education div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#education img {
+    width: 200px;
+    height: auto;
+    margin: 0 10px; /* Espacio a los lados de la imagen */
+}
+
+footer {
+    text-align: center; /* Centra el texto en el pie de página */
+    padding: 20px 0;
+    background-color: #333;
+    color: #ffffff;
+    margin-top: 40px;
+}
+
+/* Añadido para un diseño minimalista */
+.container p {
+    line-height: 1.6; /* Espaciado entre líneas para mejor legibilidad */
+    margin-bottom: 20px; /* Espaciado entre párrafos */
 }
