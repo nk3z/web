@@ -1,4 +1,3 @@
-/* styles.css */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -9,60 +8,83 @@ body {
 }
 
 .header {
-    position: relative; /* Cambiado a relative para posicionar elementos dentro */
     width: 100%;
-    background-color: #333;
-    z-index: 1000;
-}
-
-.header .cover-image {
-    width: 100%;
-    height: 300px; /* Altura de la imagen de cabecera */
-    object-fit: cover;
-    position: absolute; /* Para que la imagen no empuje el contenido hacia abajo */
-    top: 0;
-    left: 0;
-    z-index: -1; /* Imagen detrás del contenido del header */
-}
-
-.header nav {
+    overflow: hidden;
     position: relative;
-    z-index: 1; /* Asegura que el nav esté encima de la imagen */
-    padding: 10px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(51, 51, 51, 0.8); /* Fondo semi-transparente para mejor legibilidad */
 }
 
-.header ul, .header nav ul {
+.cover-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.main-nav {
+    background-color: #333;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.main-nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.header ul li, .header nav ul li {
+.main-nav ul li {
     display: inline;
     margin-right: 20px;
 }
 
-.header ul li:last-child {
+.main-nav ul li:last-child {
     margin-right: 0;
 }
 
-.header a, .header nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s ease;
+/* Estilos para los enlaces generales de la página */
+a {
+    color: #85ABED; /* Azul por defecto */
+    text-decoration: none; /* Sin subrayado */
 }
 
-.header a:hover, .header nav ul li a:hover {
-    color: #1e90ff;
+a:hover {
+    color: #85ABED; /*
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita al pasar el ratón */
+}
+
+a:visited {
+    color: #85ABED; /* Azul para enlaces visitados */
+    text-decoration: none;
+}
+
+a:active {
+    color: #85ABED; /* Azul cuando el enlace está activo */
+    text-decoration: none;
+}
+
+/* Estilos para el menú de navegación */
+.main-nav a {
+    color: #ffffff; /* Blanco por defecto */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    color: #85ABED; /* Azul al pasar el ratón */
+}
+
+.main-nav a:visited {
+    color: #ffffff; /* Blanco para enlaces visitados en el menú */
+}
+
+.main-nav a:active {
+    color: #ffffff; /* Blanco cuando el enlace del menú está activo */
 }
 
 .container {
     max-width: 800px;
-    margin: 320px auto 20px; /* Añade margen superior para compensar la imagen de cabecera */
+    margin: 20px auto;
     padding: 20px;
 }
 
@@ -77,15 +99,6 @@ section {
 h1, h2, h3, h4, h5, h6 {
     color: #ffffff;
     font-weight: 700;
-}
-
-a {
-    color: #1e90ff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 .slider {
@@ -141,8 +154,8 @@ video {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .softwares-logos li {
@@ -154,10 +167,28 @@ video {
     width: auto;
 }
 
+.software-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.software-stars {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.stars {
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
 #education div {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     margin: 20px 0;
 }
 
