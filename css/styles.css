@@ -16,10 +16,7 @@ body {
 .cover-image {
     width: 100%;
     height: auto;
-    /* Cambiado object-fit a none */
     object-fit: none;
-    /* Eliminado object-position */
-    /* object-position: center; */
 }
 
 .main-nav {
@@ -104,26 +101,40 @@ h1, h2, h3, h4, h5, h6 {
 .slider {
     position: relative;
     width: 100%;
-    height: auto; /* Cambiado height a auto */
+    height: auto;
     overflow: hidden;
     margin: 20px 0;
 }
 
 .slides {
     display: flex;
-    width: auto; /* Cambiado width a auto */
+    width: auto;
     transition: transform 0.5s ease-in-out;
 }
 
 .slides img {
-    max-width: 100%; /* Cambiado width a max-width */
+    max-width: 100%;
     height: auto;
-    /* Eliminado object-fit y display */
-    /* object-fit: contain;
-    display: block; */
 }
 
-.slider .prev, .slider .next {
+.video-slider-container {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.video-slider {
+    display: inline-block;
+}
+
+.video-slider video {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+.prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -135,18 +146,12 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 100;
 }
 
-.slider .prev {
+.prev {
     left: 0;
 }
 
-.slider .next {
+.next {
     right: 0;
-}
-
-video {
-    display: block;
-    margin: 20px auto;
-    max-width: 100%;
 }
 
 .softwares-logos {

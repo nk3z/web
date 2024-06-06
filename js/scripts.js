@@ -56,19 +56,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    document.querySelectorAll('.slider .prev, .slider2 .prev2').forEach(function(button) {
-        button.addEventListener('click', slidePrev);
-    });
-
-    document.querySelectorAll('.slider .next, .slider2 .next2').forEach(function(button) {
-        button.addEventListener('click', slideNext);
-    });
-
-    // Funciones para cambiar entre los videos
     function prevVideoSlide() {
         const videoPlayer = document.getElementById('videoPlayer');
         videoPlayer.pause(); // Pausa el video actual
         videoPlayer.currentTime = 0; // Reinicia el tiempo del video
+        videoPlayer.src = 'videos/video01.mp4'; // Cambia la fuente del video
         videoPlayer.load(); // Carga el video
     }
 
@@ -76,9 +68,20 @@ document.addEventListener("DOMContentLoaded", function() {
         const videoPlayer = document.getElementById('videoPlayer');
         videoPlayer.pause(); // Pausa el video actual
         videoPlayer.currentTime = 0; // Reinicia el tiempo del video
+        videoPlayer.src = 'videos/video02.mp4'; // Cambia la fuente del video
         videoPlayer.load(); // Carga el video
     }
 
-    document.querySelector('.slider .prev').addEventListener('click', prevVideoSlide);
-    document.querySelector('.slider .next').addEventListener('click', nextVideoSlide);
+    // Event listeners para los botones de previo y siguiente de los slides
+    document.querySelectorAll('.slider .prev').forEach(function(button) {
+        button.addEventListener('click', slidePrev);
+    });
+
+    document.querySelectorAll('.slider .next').forEach(function(button) {
+        button.addEventListener('click', slideNext);
+    });
+
+    // Event listeners para los botones de previo y siguiente del video
+    document.querySelector('.video-slider .prev').addEventListener('click', prevVideoSlide);
+    document.querySelector('.video-slider .next').addEventListener('click', nextVideoSlide);
 });
