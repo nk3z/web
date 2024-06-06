@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
         videoPlayer.currentTime = 0; // Reinicia el tiempo del video
         videoPlayer.src = 'videos/video01.mp4'; // Cambia la fuente del video
         videoPlayer.load(); // Carga el video
+        videoPlayer.play(); // Reproduce el nuevo video
     }
 
     function nextVideoSlide() {
@@ -70,9 +71,9 @@ document.addEventListener("DOMContentLoaded", function() {
         videoPlayer.currentTime = 0; // Reinicia el tiempo del video
         videoPlayer.src = 'videos/video02.mp4'; // Cambia la fuente del video
         videoPlayer.load(); // Carga el video
+        videoPlayer.play(); // Reproduce el nuevo video
     }
 
-    // Event listeners para los botones de previo y siguiente de los slides
     document.querySelectorAll('.slider .prev').forEach(function(button) {
         button.addEventListener('click', slidePrev);
     });
@@ -81,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener('click', slideNext);
     });
 
-    // Event listeners para los botones de previo y siguiente del video
     document.querySelector('.video-slider .prev').addEventListener('click', prevVideoSlide);
     document.querySelector('.video-slider .next').addEventListener('click', nextVideoSlide);
 });
