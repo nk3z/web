@@ -74,6 +74,24 @@ document.addEventListener("DOMContentLoaded", function() {
         videoPlayer.play(); // Reproduce el nuevo video
     }
 
+    function prevVideoSlide2() {
+        const videoPlayer = document.getElementById('videoPlayer2');
+        videoPlayer.pause(); // Pausa el video actual
+        videoPlayer.currentTime = 0; // Reinicia el tiempo del video
+        videoPlayer.src = 'videos/video01.mp4'; // Cambia la fuente del video
+        videoPlayer.load(); // Carga el video
+        videoPlayer.play(); // Reproduce el nuevo video
+    }
+
+    function nextVideoSlide2() {
+        const videoPlayer = document.getElementById('videoPlayer2');
+        videoPlayer.pause(); // Pausa el video actual
+        videoPlayer.currentTime = 0; // Reinicia el tiempo del video
+        videoPlayer.src = 'videos/video02.mp4'; // Cambia la fuente del video
+        videoPlayer.load(); // Carga el video
+        videoPlayer.play(); // Reproduce el nuevo video
+    }
+
     document.querySelectorAll('.slider .prev').forEach(function(button) {
         button.addEventListener('click', slidePrev);
     });
@@ -84,4 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.querySelector('.video-slider .prev').addEventListener('click', prevVideoSlide);
     document.querySelector('.video-slider .next').addEventListener('click', nextVideoSlide);
+
+    document.querySelector('.video-slider2 .prev').addEventListener('click', prevVideoSlide2);
+    document.querySelector('.video-slider2 .next').addEventListener('click', nextVideoSlide2);
 });
