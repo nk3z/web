@@ -63,4 +63,22 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll('.slider .next, .slider2 .next2').forEach(function(button) {
         button.addEventListener('click', slideNext);
     });
+
+    // Funciones para cambiar entre los videos
+    function prevVideoSlide() {
+        const videoPlayer = document.getElementById('videoPlayer');
+        videoPlayer.pause(); // Pausa el video actual
+        videoPlayer.currentTime = 0; // Reinicia el tiempo del video
+        videoPlayer.load(); // Carga el video
+    }
+
+    function nextVideoSlide() {
+        const videoPlayer = document.getElementById('videoPlayer');
+        videoPlayer.pause(); // Pausa el video actual
+        videoPlayer.currentTime = 0; // Reinicia el tiempo del video
+        videoPlayer.load(); // Carga el video
+    }
+
+    document.querySelector('.slider .prev').addEventListener('click', prevVideoSlide);
+    document.querySelector('.slider .next').addEventListener('click', nextVideoSlide);
 });
