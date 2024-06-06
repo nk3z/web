@@ -16,8 +16,10 @@ body {
 .cover-image {
     width: 100%;
     height: auto;
-    object-fit: cover;
-    object-position: center;
+    /* Cambiado object-fit a none */
+    object-fit: none;
+    /* Eliminado object-position */
+    /* object-position: center; */
 }
 
 .main-nav {
@@ -102,22 +104,23 @@ h1, h2, h3, h4, h5, h6 {
 .slider {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: auto; /* Cambiado height a auto */
     overflow: hidden;
     margin: 20px 0;
 }
 
 .slides {
     display: flex;
-    width: 100%;
+    width: auto; /* Cambiado width a auto */
     transition: transform 0.5s ease-in-out;
 }
 
 .slides img {
-    width: 100%;
+    max-width: 100%; /* Cambiado width a max-width */
     height: auto;
-    object-fit: contain;
-    display: block;
+    /* Eliminado object-fit y display */
+    /* object-fit: contain;
+    display: block; */
 }
 
 .slider .prev, .slider .next {
