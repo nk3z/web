@@ -16,7 +16,7 @@ body {
 .cover-image {
     width: 100%;
     height: auto;
-    object-fit: none;
+    object-fit: cover; /* Asegura que la imagen cubra toda el área del contenedor */
 }
 
 .main-nav {
@@ -32,12 +32,29 @@ body {
 }
 
 .main-nav ul li {
-    display: inline;
+    display: inline-block; /* Cambiado a inline-block para mejor control en móvil */
     margin-right: 20px;
 }
 
 .main-nav ul li:last-child {
     margin-right: 0;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px; /* Añadido padding para mejorar la usabilidad */
+    display: inline-block; /* Asegura que el área clickable sea más grande */
+}
+
+.main-nav a:hover {
+    color: #85ABED;
+}
+
+.main-nav a:visited,
+.main-nav a:active {
+    color: #ffffff;
 }
 
 a {
@@ -51,32 +68,9 @@ a:hover {
     font-weight: bold;
 }
 
-a:visited {
-    color: #85ABED;
-    text-decoration: none;
-}
-
+a:visited,
 a:active {
     color: #85ABED;
-    text-decoration: none;
-}
-
-.main-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.main-nav a:hover {
-    color: #85ABED;
-}
-
-.main-nav a:visited {
-    color: #ffffff;
-}
-
-.main-nav a:active {
-    color: #ffffff;
 }
 
 .container {
@@ -218,4 +212,22 @@ footer {
 
 .clone {
     display: none;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .main-nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .main-nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .main-nav ul li:last-child {
+        margin-bottom: 0;
+    }
 }
