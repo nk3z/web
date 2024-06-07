@@ -1,108 +1,63 @@
+// scripts.js
 document.addEventListener("DOMContentLoaded", function() {
-    const slides = document.querySelectorAll(".slider .slides");
-    const slideWidth = slides[0].clientWidth;
+    // Variables y funciones para los sliders de imágenes
     let currentIndex = 0;
-    const cloneCount = 10; // Número de clones a crear
-    let totalImages = slides[0].children.length;
 
-    // Clona las imágenes para crear un bucle continuo
-    for (let i = 0; i < cloneCount; i++) {
-        slides.forEach(function(slider) {
-            slider.innerHTML += slider.innerHTML;
-        });
+    function prevSlide() {
+        const slides = document.querySelector('.slider .slides');
+        currentIndex = (currentIndex === 0) ? slides.children.length - 1 : currentIndex - 1;
+        updateSlidePosition(slides);
     }
 
-    totalImages = slides[0].children.length;
-
-    function slideNext() {
-        currentIndex++;
-        if (currentIndex === totalImages) {
-            currentIndex = 0;
-            slides.forEach(function(slider) {
-                slider.style.transition = "none";
-                slider.style.transform = `translateX(0)`;
-                setTimeout(() => {
-                    slider.style.transition = "transform 0.5s ease-in-out";
-                    currentIndex++;
-                    slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-                }, 10);
-            });
-        } else {
-            slides.forEach(function(slider) {
-                slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-            });
-        }
+    function nextSlide() {
+        const slides = document.querySelector('.slider .slides');
+        currentIndex = (currentIndex === slides.children.length - 1) ? 0 : currentIndex + 1;
+        updateSlidePosition(slides);
     }
 
-    setInterval(slideNext, 3000); // Cambiar cada 3 segundos
-
-    function slidePrev() {
-        currentIndex--;
-        if (currentIndex < 0) {
-            currentIndex = totalImages - 1;
-            slides.forEach(function(slider) {
-                slider.style.transition = "none";
-                slider.style.transform = `translateX(-${totalImages * slideWidth}px)`;
-                setTimeout(() => {
-                    slider.style.transition = "transform 0.5s ease-in-out";
-                    currentIndex--;
-                    slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-                }, 10);
-            });
-        } else {
-            slides.forEach(function(slider) {
-                slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-            });
-        }
+    function updateSlidePosition(slides) {
+        const slideWidth = slides.children[0].clientWidth;
+        slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
     }
 
-    function prevVideoSlide() {
-        const videoPlayer = document.getElementById('videoPlayer');
-        videoPlayer.pause(); // Pausa el video actual
-        videoPlayer.currentTime = 0; // Reinicia el tiempo del video
-        videoPlayer.src = 'videos/video01.mp4'; // Cambia la fuente del video
-        videoPlayer.load(); // Carga el video
-        videoPlayer.play(); // Reproduce el nuevo video
-    }
-
-    function nextVideoSlide() {
-        const videoPlayer = document.getElementById('videoPlayer');
-        videoPlayer.pause(); // Pausa el video actual
-        videoPlayer.currentTime = 0; // Reinicia el tiempo del video
-        videoPlayer.src = 'videos/video02.mp4'; // Cambia la fuente del video
-        videoPlayer.load(); // Carga el video
-        videoPlayer.play(); // Reproduce el nuevo video
-    }
-
-    function prevVideoSlide2() {
-        const videoPlayer = document.getElementById('videoPlayer2');
-        videoPlayer.pause(); // Pausa el video actual
-        videoPlayer.currentTime = 0; // Reinicia el tiempo del video
-        videoPlayer.src = 'videos/video01.mp4'; // Cambia la fuente del video
-        videoPlayer.load(); // Carga el video
-        videoPlayer.play(); // Reproduce el nuevo video
-    }
-
-    function nextVideoSlide2() {
-        const videoPlayer = document.getElementById('videoPlayer2');
-        videoPlayer.pause(); // Pausa el video actual
-        videoPlayer.currentTime = 0; // Reinicia el tiempo del video
-        videoPlayer.src = 'videos/video02.mp4'; // Cambia la fuente del video
-        videoPlayer.load(); // Carga el video
-        videoPlayer.play(); // Reproduce el nuevo video
-    }
-
+    // Event listeners para los botones del slider de imágenes
     document.querySelectorAll('.slider .prev').forEach(function(button) {
-        button.addEventListener('click', slidePrev);
+        button.addEventListener('click', prevSlide);
     });
 
     document.querySelectorAll('.slider .next').forEach(function(button) {
-        button.addEventListener('click', slideNext);
+        button.addEventListener('click', nextSlide);
     });
 
-    document.querySelector('.video-slider .prev').addEventListener('click', prevVideoSlide);
-    document.querySelector('.video-slider .next').addEventListener('click', nextVideoSlide);
+    // Variables y funciones para los sliders de videos
+    const videoPlayer = document.getElementById('videoPlayer');
+    const videoSources = ['videos/video01.mp4', 'videos/video02.mp4'];
+    let currentVideoIndex = 0;
 
-    document.querySelector('.video-slider2 .prev').addEventListener('click', prevVideoSlide2);
-    document.querySelector('.video-slider2 .next').addEventListener('click', nextVideoSlide2);
+    function changeVideo(index) {
+        videoPlayer.classList.add('fade-out');
+
+        setTimeout(() => {
+            currentVideoIndex = index;
+            videoPlayer.src = videoSources[currentVideoIndex];
+            videoPlayer.load();
+            videoPlayer.play();
+            videoPlayer.classList.remove('fade-out');
+            videoPlayer.classList.add('fade-in');
+        }, 500); // Tiempo que tarda el efecto fade-out
+    }
+
+    function prevVideoSlide() {
+        const newIndex = (currentVideoIndex === 0) ? videoSources.length - 1 : currentVideoIndex - 1;
+        changeVideo(newIndex);
+    }
+
+    function nextVideoSlide() {
+        const newIndex = (currentVideoIndex === videoSources.length - 1) ? 0 : currentVideoIndex + 1;
+        changeVideo(newIndex);
+    }
+
+    // Event listeners para los botones del slider de videos
+    document.querySelector('.video-slider-container .prev').addEventListener('click', prevVideoSlide);
+    document.querySelector('.video-slider-container .next').addEventListener('click', nextVideoSlide);
 });
