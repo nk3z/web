@@ -49,7 +49,7 @@ body {
 }
 
 .main-nav a:hover {
-    color: #85ABED;
+    color: blue; /* Cambia a azul al pasar el ratón por encima */
 }
 
 .main-nav a:visited,
