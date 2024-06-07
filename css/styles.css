@@ -35,14 +35,14 @@ body {
 }
 
 .main-nav ul li {
-    margin: 5px 10px; /* Añade un pequeño margen alrededor de cada elemento para un mejor espaciado */
+    margin: 5px; /* Reducido el margen para disminuir el espacio entre elementos */
 }
 
 .main-nav a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 15px; /* Añadido padding para mejorar la usabilidad */
+    padding: 10px 10px; /* Reducido el padding para mejorar la usabilidad */
     display: inline-block; /* Asegura que el área clickable sea más grande */
 }
 
@@ -232,6 +232,6 @@ footer {
     }
     
     .main-nav ul li {
-        margin: 5px 10px;
+        margin: 5px; /* Reducido el margen para disminuir el espacio entre elementos */
     }
 }
