@@ -16,7 +16,7 @@
             <li><a href="#experience-profesional">Exp. Profesional</a></li>
             <li><a href="#experience">Exp. Personal</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#Softwares">Softwares</a></li> <!-- Corregido -->
+            <li><a href="#Softwares">Softwares</a></li>
             <li><a href="#education">Educación</a></li>
             <li><a href="#nota-al-pie">Nota</a></li>
             <li><a href="#contact">Contacto</a></li>
@@ -47,30 +47,39 @@
                 <h3>Biblioteca personalizada</h3>
                 <p>Para ello comencé a crear una biblioteca personalizada de modelos 3D reutilizables, reduciendo el tiempo de diseño. Implementé sistemas de organización eficientes para la biblioteca, facilitando la búsqueda y selección de componentes para su incorporación en nuevos diseños de packaging.</p>
                 <p>Actualmente tengo a disposición una biblioteca con más de mil modelos de todos los sectores, con medidas, referencias físicas reales y que cubre un porcentaje bastante alto de todos los envases de la industria.</p>
-                <div class="video-slider-container">
-                    <button class="prev" onclick="prevVideoSlide()">&#10094;</button>
-                    <div class="video-slider">
-                        <video id="videoPlayer" controls width="90%">
-                            <source src="videos/video01.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <button class="next" onclick="nextVideoSlide()">&#10095;</button>
-                </div>
+                <video width="90%" autoplay loop muted>
+                    <source src="videos/video03.mp4" type="video/mp4">
+                    <source src="videos/video03.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+
                 <h3>Dominio de herramientas paramétricas avanzadas</h3>
                 <p>Debido a las limitaciones de una biblioteca para su escalabilidad, como la falta de control sobre los modelos y la producción individualizada, estudié distintas vías para maximizar la producción y resolver los problemas destructivos de la creación de los modelos.</p>
                 <p>Para abordar estos desafíos, me tope con las herramientas paramétricas, que permiten la creación de modelos parametricos con características ajustables.</p>
-                <p>Utilizando esta metodología, diseñe y creé una serie de herramientas para la creacion de packaging con un caracter determinado, como botellas, doypacks, cintas, vasos, entre otros, que comparten características comunes.</p>
-                <video width="90%" autoplay loop muted>
-                    <source src="videos/video01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <div class="video-slider-container">
+                    <button class="prev" onclick="prevVideoSlide(1)">&#10094;</button>
+                    <div class="video-slider">
+                        <video id="videoPlayer1" controls autoplay muted width="90%">
+                            <source src="videos/tools/video01.mp4" type="video/mp4">
+                            <source src="videos/tools/video01.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <button class="next" onclick="nextVideoSlide(1)">&#10095;</button>
+                </div>
                 <p>Este enfoque innovador transformó nuestro proceso de producción, permitiendo generar cientos de modelos simultáneamente, con más exactitud debido a su carácter paramétrico y un menor peso de los objetos por su optimización, sustituyendo en la medida de lo posible al proceso manual y destructivo.</p>
                 <p>Y para los modelos que no cumplan para poder formarlos completamente con esta tecnologia parametrica, desarrollé herramientas puntuales de trabajos repetitivos o tediosos para poder usar insitu en el proceso de modelado manual. Como ejemplo: un unwrap que centra el UV y lo pone cuadrado, para la mayoría de etiquetas o un generador de rosca y contrarosca para hacer esta parte tediosa en unos pocos clicks, entre otras herramientas.</p>
-                <video width="90%" autoplay loop muted>
-                    <source src="videos/video01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <div class="video-slider-container">
+                    <button class="prev" onclick="prevVideoSlide(2)">&#10094;</button>
+                    <div class="video-slider">
+                        <video id="videoPlayer2" controls autoplay muted width="90%">
+                            <source src="videos/tools2/video01.mp4" type="video/mp4">
+                            <source src="videos/tools2/video01.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <button class="next" onclick="nextVideoSlide(2)">&#10095;</button>
+                </div>
                 <h3>Addon de exportación</h3>
                 <p>Otra herramienta que desarrollé junto a ChatGPT pero en python, por eso la necesidad de una ia, es un addon para blender que exporta en lote para cubrir la producción que en muchos casos se hacía en masa y de paso añadí algunas funciones más de carácter repetitivo.</p>
                 <a href="https://github.com/nk3z/">Repositorio del addon</a>
@@ -78,20 +87,34 @@
                 <p>Centrado más en la creación y mejora de las herramientas para producir modelos, hace posible que otros trabajadores no especializados en el modelado puedan generar modelos. Como resultado, la eficiencia y productividad de nuestro equipo aumentaron significativamente, acelerando la entrega de proyectos y mejorando la calidad de nuestros diseños.</p>
                 <h3>Promociones y otros trabajos</h3>
                 <p>(desarrollar esto)</p>
-                <video width="90%" autoplay loop muted>
-                    <source src="videos/video01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <div class="video-slider-container">
+                    <button class="prev" onclick="prevVideoSlide(5)">&#10094;</button>
+                    <div class="video-slider">
+                        <video id="videoPlayer5" controls autoplay muted width="90%">
+                            <source src="videos/promos/video01.mp4" type="video/mp4">
+                            <source src="videos/promos/video01.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <button class="next" onclick="nextVideoSlide(5)">&#10095;</button>
+                </div>
             </section>
             <section id="experience">
                 <h2>Experiencia Personal</h2>
                 <p>Como comentaba mi experiencia personal esta ligada a la profesional, en el del modelado parámetro, no tenía claro como crear packaging porque realmente no sabía ni como funcionaba y me parecía realmente complicado.</p>
                 <h3>Ciudades parametricas</h3>
                 <p>asi como quería aprenderlo y para amenizar esta carga. Como justo en ese momento estaba haciendo una reimaginacion de mi pueblo a escala en 3d con Unreal, me vino la idea de generar ciudades procedurales y me pusé a estudiar Geometry Nodes de Blender, después de un año comenzaba a dominarlo y pude desarrollar esta idea, está vez llevandolo a Godot. Gracias a esto he podido profesionalizarme en el modelado procedural y saber aplicarlo a cualquier situación.</p>
-                <video width="90%" autoplay loop muted>
-                    <source src="videos/video01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <div class="video-slider-container">
+                    <button class="prev" onclick="prevVideoSlide(4)">&#10094;</button>
+                    <div class="video-slider">
+                        <video id="videoPlayer4" controls autoplay muted width="90%">
+                            <source src="videos/nodes/video01.mp4" type="video/mp4">
+                            <source src="videos/nodes/video01.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <button class="next" onclick="nextVideoSlide(4)">&#10095;</button>
+                </div>
                 <h3>Assets</h3>
                 <p>También mi parte de desarrollo de videojuegos me mantiene inquieto, por eso de vez en cuando tambien hago modelado de personajes y organismos, ya sea personajes para animarlos y poder moverlos en los motores de videojuegos o modelado de assets en general para el envivorement, para renders o en menor medida para imprimir.</p>
                 <div class="slider slider2">
@@ -104,24 +127,30 @@
                     <button class="next additional-next" onclick="nextSlide2()">&#10095;</button>
                 </div>
                 <h3>Motores de videojuegos</h3>
-                <p>Y ya desligando totalmente del modelado, mi otra pasión son los motores de videojuegos. No solo por los videojuegos si no por la interactividad 3d. Mi primer contacto fué con Unity en la demo del <a href="https://nakez.itch.io/cryptophasia">TFG</a>, pero eso fué hace bastante y no tiene nada que ver con mi conocimiento actual. Dónde más tiempo he echado es en Unreal donde mediante los blueprint podia dar vida a los espacios y los personajes. Pero justo cuando comencé con Geometry Nodes conocí Godot y casi como con Blender me cautivo y es aquí donde hago mis proyectos actuales. Y como mis nociones de programación son realmente básicas, gracias a ChatGPT he podido crear todos los scripts que he necesitado, al igual que he podido desarrollar el addon de exportación y esta  <a href="https://github.com/nk3z/">pagina</a>.</p>
-                <video width="90%" autoplay loop muted>
-                    <source src="videos/video01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <p>Y ya desligando totalmente del modelado, mi otra pasión son los motores de videojuegos. No solo por los videojuegos si no por la interactividad 3d. Mi primer contacto fué con Unity en la demo del <a href="https://nakez.itch.io/cryptophasia">TFG</a>, pero eso fué hace bastante y no tiene nada que ver con mi conocimiento actual. Dónde más tiempo he echado es en Unreal donde mediante los blueprint podia dar vida a los espacios y los personajes. Pero justo cuando comencé con Geometry Nodes conocí Godot y casi como con Blender me cautivo y es aquí donde hago mis proyectos actuales. Y como mis nociones de programación son realmente básicas, gracias a ChatGPT he podido crear todos los scripts que he necesitado, al igual que he podido desarrollar el addon de exportación y esta <a href="https://github.com/nk3z/">pagina</a>.</p>
+                <div class="video-slider-container">
+                    <button class="prev" onclick="prevVideoSlide(3)">&#10094;</button>
+                    <div class="video-slider">
+                        <video id="videoPlayer3" controls autoplay muted width="90%">
+                            <source src="videos/engines/video01.mp4" type="video/mp4">
+                            <source src="videos/engines/video02.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <button class="next" onclick="nextVideoSlide(3)">&#10095;</button>
+                </div>
             </section>
             <section id="skills">
                 <h2>Skills</h2>
                 <p>Para terminar aunque especializado en el modelado y la produccion 3d, como buen seguidor de la filosofia DIY no hago separación y conozco y trabajo todas las partes como generalista.</p>
-                <p><strong>Modelado</strong> hard surface y orgánico: De esto creo que no hace falta hablar más.</p>
-                <p>Shaders: Al igual que la geometria parametrica, hacer shaders parametricos es otra de mis pasiones y prefiero tener una biblioteca de de shaders parametricos que el pintado tradicional, que no quita que si lo necesito use Substance Painter o su alternativa open source Armorpaint.</p>
-                <p>Texturizado: Como ya comenté todo packaging suele tener una etiqueta, un sleeve que es un recubrimiento completo del envase o cualquier otro tipo de zona de personalizacion, asi que parte de mi trabajo diario es sacar varios tipos de mapas UV, para ello tambien he desarrollado herramientas parametricas para sacar los UVs de formas predeterminadas para el packaging que normalmente son cuadradas y esto era un trabajo manual.</p>
-                <p>Lighting/Camera: Por mi tiempo con las cámaras y mis posteriores estudios audiovisuales, tengo un amplio conocimiento real de la iluminación que aplico al entorno 3d.</p>
-                <p>Render: Aqui no tengo mucho que decir salvo que me gusta optimizar los tiempo y ajustar los render para maximizar la calidad en el menor tiempo posible. Otra rama bien estudiada.</p>
-                <p>Animación: Empecé haciendo animaciones pero a dia de hoy siendo sincero es la parte que menos me interesa.</p>
+                <p><strong>Modelado:</strong> hard surface y orgánico, de esto creo que no hace falta hablar más.</p>
+                <p><strong>Shaders:</strong> Al igual que la geometria parametrica, hacer shaders parametricos es otra de mis pasiones y prefiero tener una biblioteca de de shaders parametricos que el pintado tradicional, que no quita que si lo necesito use Substance Painter o su alternativa open source Armorpaint.</p>
+                <p><strong>Texturizado:</strong> Como ya comenté todo packaging suele tener una etiqueta, un sleeve que es un recubrimiento completo del envase o cualquier otro tipo de zona de personalizacion, asi que parte de mi trabajo diario es sacar varios tipos de mapas UV, para ello tambien he desarrollado herramientas parametricas para sacar los UVs de formas predeterminadas para el packaging que normalmente son cuadradas y esto era un trabajo manual.</p>
+                <p><strong>Lighting/Camera:</strong> Por mi tiempo con las cámaras y mis posteriores estudios audiovisuales, tengo un amplio conocimiento real de la iluminación que aplico al entorno 3d.</p>
+                <p><strong>Render:</strong> Aqui no tengo mucho que decir salvo que me gusta optimizar los tiempo y ajustar los render para maximizar la calidad en el menor tiempo posible. Otra rama bien estudiada.</p>
+                <p><strong>Animación:</strong> Empecé haciendo animaciones pero a dia de hoy siendo sincero es la parte que menos me interesa.</p>
                 <section id="Softwares">
                     <h2>Softwares</h2>
-                
                     <div class="software-group">
                         <div class="software-stars">
                             <span class="stars">★★★</span>
