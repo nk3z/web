@@ -96,6 +96,8 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
     overflow: hidden;
     margin: 20px 0;
+    display: flex;
+    justify-content: center;
 }
 
 .slides {
@@ -114,6 +116,8 @@ h1, h2, h3, h4, h5, h6 {
     width: 90%;
     margin: 0 auto;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .video-slider {
@@ -123,6 +127,12 @@ h1, h2, h3, h4, h5, h6 {
 .video-slider video {
     display: block;
     margin: 20px auto;
+    max-width: 100%;
+}
+
+video {
+    display: block;
+    margin: 0 auto;
     max-width: 100%;
 }
 
@@ -160,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .softwares-logos img {
-    height: 32px;
+    height: 48px;
     width: auto;
 }
 
@@ -190,7 +200,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #education img {
-    width: 200px;
+    width: 250px;
     height: auto;
     margin: 0 10px;
 }
@@ -221,6 +231,12 @@ footer {
 .fade-in {
     opacity: 1;
     transition: opacity 0.5s ease-in;
+}
+
+#contact img {
+    width: 32px; /* Ajusta este tamaño según sea necesario */
+    height: auto;
+    margin: 0 10px;
 }
 
 /* Estilos responsivos */
