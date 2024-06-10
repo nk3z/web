@@ -80,15 +80,17 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Event listeners para los botones del slider de videos
-    document.querySelectorAll('.video-slider-container .prev').forEach(function(button, index) {
+    document.querySelectorAll('.video-slider-container .prev').forEach(function(button) {
         button.addEventListener('click', function() {
-            prevVideoSlide(index);
+            const playerIndex = button.getAttribute('data-index') - 1;
+            prevVideoSlide(playerIndex);
         });
     });
 
-    document.querySelectorAll('.video-slider-container .next').forEach(function(button, index) {
+    document.querySelectorAll('.video-slider-container .next').forEach(function(button) {
         button.addEventListener('click', function() {
-            nextVideoSlide(index);
+            const playerIndex = button.getAttribute('data-index') - 1;
+            nextVideoSlide(playerIndex);
         });
     });
 });

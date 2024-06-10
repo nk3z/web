@@ -57,7 +57,7 @@
                 <p>Debido a las limitaciones de una biblioteca para su escalabilidad, como la falta de control sobre los modelos y la producción individualizada, estudié distintas vías para maximizar la producción y resolver los problemas destructivos de la creación de los modelos.</p>
                 <p>Para abordar estos desafíos, me tope con las herramientas paramétricas, que permiten la creación de modelos parametricos con características ajustables.</p>
                 <div class="video-slider-container">
-                    <button class="prev" onclick="prevVideoSlide(1)">&#10094;</button>
+                    <button class="prev" data-index="1">&#10094;</button>
                     <div class="video-slider">
                         <video id="videoPlayer1" controls autoplay muted width="90%">
                             <source src="videos/tools/video01.mp4" type="video/mp4">
@@ -65,12 +65,12 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <button class="next" onclick="nextVideoSlide(1)">&#10095;</button>
+                    <button class="next" data-index="1">&#10095;</button>
                 </div>
                 <p>Este enfoque innovador transformó nuestro proceso de producción, permitiendo generar cientos de modelos simultáneamente, con más exactitud debido a su carácter paramétrico y un menor peso de los objetos por su optimización, sustituyendo en la medida de lo posible al proceso manual y destructivo.</p>
                 <p>Y para los modelos que no cumplan para poder formarlos completamente con esta tecnologia parametrica, desarrollé herramientas puntuales de trabajos repetitivos o tediosos para poder usar insitu en el proceso de modelado manual. Como ejemplo: un unwrap que centra el UV y lo pone cuadrado, para la mayoría de etiquetas o un generador de rosca y contrarosca para hacer esta parte tediosa en unos pocos clicks, entre otras herramientas.</p>
                 <div class="video-slider-container">
-                    <button class="prev" onclick="prevVideoSlide(2)">&#10094;</button>
+                    <button class="prev" data-index="2">&#10094;</button>
                     <div class="video-slider">
                         <video id="videoPlayer2" controls autoplay muted width="90%">
                             <source src="videos/tools2/video01.mp4" type="video/mp4">
@@ -78,7 +78,7 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <button class="next" onclick="nextVideoSlide(2)">&#10095;</button>
+                    <button class="next" data-index="2">&#10095;</button>
                 </div>
                 <h3>Addon de exportación</h3>
                 <p>Otra herramienta que desarrollé junto a ChatGPT pero en python, por eso la necesidad de una ia, es un addon para blender que exporta en lote para cubrir la producción que en muchos casos se hacía en masa y de paso añadí algunas funciones más de carácter repetitivo.</p>
@@ -88,7 +88,7 @@
                 <h3>Promociones y otros trabajos</h3>
                 <p>(desarrollar esto)</p>
                 <div class="video-slider-container">
-                    <button class="prev" onclick="prevVideoSlide(5)">&#10094;</button>
+                    <button class="prev" data-index="5">&#10094;</button>
                     <div class="video-slider">
                         <video id="videoPlayer5" controls autoplay muted width="90%">
                             <source src="videos/promos/video01.mp4" type="video/mp4">
@@ -96,7 +96,7 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <button class="next" onclick="nextVideoSlide(5)">&#10095;</button>
+                    <button class="next" data-index="5">&#10095;</button>
                 </div>
             </section>
             <section id="experience">
@@ -105,7 +105,7 @@
                 <h3>Ciudades parametricas</h3>
                 <p>asi como quería aprenderlo y para amenizar esta carga. Como justo en ese momento estaba haciendo una reimaginacion de mi pueblo a escala en 3d con Unreal, me vino la idea de generar ciudades procedurales y me pusé a estudiar Geometry Nodes de Blender, después de un año comenzaba a dominarlo y pude desarrollar esta idea, está vez llevandolo a Godot. Gracias a esto he podido profesionalizarme en el modelado procedural y saber aplicarlo a cualquier situación.</p>
                 <div class="video-slider-container">
-                    <button class="prev" onclick="prevVideoSlide(4)">&#10094;</button>
+                    <button class="prev" data-index="4">&#10094;</button>
                     <div class="video-slider">
                         <video id="videoPlayer4" controls autoplay muted width="90%">
                             <source src="videos/nodes/video01.mp4" type="video/mp4">
@@ -113,7 +113,7 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <button class="next" onclick="nextVideoSlide(4)">&#10095;</button>
+                    <button class="next" data-index="4">&#10095;</button>
                 </div>
                 <h3>Assets</h3>
                 <p>También mi parte de desarrollo de videojuegos me mantiene inquieto, por eso de vez en cuando tambien hago modelado de personajes y organismos, ya sea personajes para animarlos y poder moverlos en los motores de videojuegos o modelado de assets en general para el envivorement, para renders o en menor medida para imprimir.</p>
@@ -129,7 +129,7 @@
                 <h3>Motores de videojuegos</h3>
                 <p>Y ya desligando totalmente del modelado, mi otra pasión son los motores de videojuegos. No solo por los videojuegos si no por la interactividad 3d. Mi primer contacto fué con Unity en la demo del <a href="https://nakez.itch.io/cryptophasia">TFG</a>, pero eso fué hace bastante y no tiene nada que ver con mi conocimiento actual. Dónde más tiempo he echado es en Unreal donde mediante los blueprint podia dar vida a los espacios y los personajes. Pero justo cuando comencé con Geometry Nodes conocí Godot y casi como con Blender me cautivo y es aquí donde hago mis proyectos actuales. Y como mis nociones de programación son realmente básicas, gracias a ChatGPT he podido crear todos los scripts que he necesitado, al igual que he podido desarrollar el addon de exportación y esta <a href="https://github.com/nk3z/">pagina</a>.</p>
                 <div class="video-slider-container">
-                    <button class="prev" onclick="prevVideoSlide(3)">&#10094;</button>
+                    <button class="prev" data-index="3">&#10094;</button>
                     <div class="video-slider">
                         <video id="videoPlayer3" controls autoplay muted width="90%">
                             <source src="videos/engines/video01.mp4" type="video/mp4">
@@ -137,7 +137,7 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <button class="next" onclick="nextVideoSlide(3)">&#10095;</button>
+                    <button class="next" data-index="3">&#10095;</button>
                 </div>
             </section>
             <section id="skills">
