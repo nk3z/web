@@ -1,14 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Selecciona todos los enlaces de la página que no estén en el menú de navegación
     const links = document.querySelectorAll("a:not(.main-nav a)");
 
-    // Añade el atributo target="_blank" y rel="noopener noreferrer" a cada enlace seleccionado
     links.forEach(function (link) {
         link.setAttribute("target", "_blank");
         link.setAttribute("rel", "noopener noreferrer");
     });
 
-    // Variables y funciones para los sliders de imágenes
     const sliders = document.querySelectorAll(".slider");
     sliders.forEach((slider, index) => {
         let currentIndex = 0;
@@ -33,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
         slider.querySelector(".next").addEventListener("click", nextSlide);
     });
 
-    // Variables y funciones para el único slider de video
     const videoPlayer = document.getElementById("videoPlayer5");
     const videoSources = [
         "videos/promos/video01.mp4",
@@ -55,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
             videoPlayer.play();
             videoPlayer.classList.remove("fade-out");
             videoPlayer.classList.add("fade-in");
-        }, 500); // Tiempo que tarda el efecto fade-out
+        }, 500);
     }
 
     function prevVideoSlide() {
@@ -68,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
         changeVideo(newIndex);
     }
 
-    // Event listeners para los botones del slider de video
     document.querySelector(".video-slider-container .prev").addEventListener("click", prevVideoSlide);
     document.querySelector(".video-slider-container .next").addEventListener("click", nextVideoSlide);
 });
