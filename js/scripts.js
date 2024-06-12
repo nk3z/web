@@ -5,8 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (currentTheme === "light") {
         document.body.classList.add("light-theme");
-        themeIcon.classList.remove("fa-sun");
-        themeIcon.classList.add("fa-moon");
+        themeIcon.src = "images/moon.svg";
     }
 
     themeToggleBtn.addEventListener("click", function () {
@@ -15,11 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("theme", theme);
 
         if (theme === "light") {
-            themeIcon.classList.remove("fa-sun");
-            themeIcon.classList.add("fa-moon");
+            themeIcon.src = "images/moon.svg";
         } else {
-            themeIcon.classList.remove("fa-moon");
-            themeIcon.classList.add("fa-sun");
+            themeIcon.src = "images/sun.svg";
         }
     });
 
