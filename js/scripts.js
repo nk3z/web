@@ -1,4 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const themeToggleBtn = document.getElementById("theme-toggle");
+    const themeIcon = document.getElementById("theme-icon");
+    const currentTheme = localStorage.getItem("theme") || "dark";
+
+    if (currentTheme === "light") {
+        document.body.classList.add("light-theme");
+        themeIcon.classList.remove("fa-sun");
+        themeIcon.classList.add("fa-moon");
+    }
+
+    themeToggleBtn.addEventListener("click", function () {
+        document.body.classList.toggle("light-theme");
+        const theme = document.body.classList.contains("light-theme") ? "light" : "dark";
+        localStorage.setItem("theme", theme);
+
+        if (theme === "light") {
+            themeIcon.classList.remove("fa-sun");
+            themeIcon.classList.add("fa-moon");
+        } else {
+            themeIcon.classList.remove("fa-moon");
+            themeIcon.classList.add("fa-sun");
+        }
+    });
+
+    // Resto del código existente
     const links = document.querySelectorAll("a:not(.main-nav a)");
 
     links.forEach(function (link) {

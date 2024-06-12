@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>n4k3z</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header class="header">
@@ -20,6 +21,11 @@
             <li><a href="#education">Educación</a></li>
             <li><a href="#nota-al-pie">Nota</a></li>
             <li><a href="#contact">Contacto</a></li>
+            <li>
+                <button id="theme-toggle" class="theme-toggle">
+                    <i id="theme-icon" class="fas fa-moon"></i>
+                </button>
+            </li>
         </ul>
     </nav>    
     <div class="container">
@@ -51,19 +57,19 @@
                     Your browser does not support the video tag.
                 </video>
                 <h3>Herramientas paramétricas</h3>
-                <p>Aunque la biblioteca de modelos tiene muchas ventajas, también presenta limitaciones, como la falta de control sobre los modelos y la producción individualizada. Esto hace que, para grandes producciones aún con modelos similares, sea necesario duplicar y crear modelos uno por uno. Por ello, busqué una manera de optimizar la producción y descubrí Geometry Nodes de Blender. Esta herramienta me permitió parametrizar envases comunes y así crear herramientas para generar modelos completos de forma más eficiente.</p>
+                <p>Aunque la biblioteca tiene muchas ventajas, también presenta limitaciones, como la falta de control sobre los modelos y la producción individualizada. Esto hace que, para grandes producciones aún con modelos similares, sea necesario duplicar y crear modelos uno por uno. Para solucionar esta limitación, busqué una manera de optimizar la producción y descubrí el modelado parametrico con Geometry Nodes de Blender. Esta herramienta me permitió parametrizar envases comunes y así crear herramientas para generar modelos completos de forma más eficiente.</p>
                 <video width="90%" autoplay loop muted>
                     <source src="videos/tools/video01.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p>Este nuevo enfoque transformó nuestro proceso de producción, permitiendo generar cientos de modelos, con más exactitud debido a su carácter paramétrico y un menor peso de los objetos por su optimización, sustituyendo siempre que sea posible el proceso manual y haciendo posible que otros trabajadores no especializados puedan generar modelos. Como resultado, la eficiencia y productividad de nuestro equipo aumentaron significativamente.</p>
-
+                <p>Este enfoque transformó nuestro proceso de producción, permitiendo generar cientos de modelos, con más exactitud debido a su carácter paramétrico y un menor peso de los objetos por su optimización, sustituyendo siempre que sea posible el proceso manual y haciendo posible que otros trabajadores no especializados puedan generar modelos. Como resultado, la eficiencia y productividad de nuestro equipo aumentaron significativamente.</p>
+                <p>También desarrollé herramientas específicas para facilitar el modelado tradicional y manejar tareas repetitivas y tediosas, que se pueden utilizar en cualquier momento. Por ejemplo, un unwrap que centra el UV y lo ajusta a una forma cuadrada, muy útil para las zonas de personalización, y un generador de roscas y contrarroscas parametrizadas.</p>
                 <video width="90%" autoplay loop muted>
                     <source src="videos/tools2/video01.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <h3>Addon de exportación</h3>
-                <p>Otra herramienta que desarrollé para solucionar el problema de la exportación en masa es un addon para Blender, creado en Python y con la ayuda de ChatGPT.</p>
+                <p>Otra herramienta que desarrollé para solucionar el problema de la exportación en masa es un addon para Blender creado en Python.</p>
                 <a href="https://github.com/nk3z/">GLTF Export</a>
                 <br>
                 <img src="images/addon.png" alt="Imagen del addon">                            
@@ -83,7 +89,7 @@
             </section>
             <section id="experience">
                 <h2>Experiencia Personal</h2>
-                <p>Como mencioné al principio, mi experiencia personal está estrechamente ligada a la profesional. Ejemplo de esto es mi estudio del modelado paramétrico con Geometry Nodes,  que dada su dificultad no sabía cómo aprender esta herramienta ni cómo aplicarla en mi trabajo. Por ello, busqué un proyecto personal en el que pudiera aplicar este aprendizaje y mantenerte motivado.</p>
+                <p>Como mencioné al principio, mi experiencia personal está estrechamente ligada a la profesional. Ejemplo de esto es mi estudio del modelado paramétrico con Geometry Nodes,  que dada su dificultad no sabía cómo aprender esta herramienta ni cómo aplicarla en el trabajo. Por ello, busqué un proyecto personal en el que pudiera aplicar este aprendizaje y motivarme.</p>
                 <h3>Ciudades parametricas</h3>
                 <p>En ese momento, estaba recreando mi pueblo de la infancia a escala, utilizando Unreal Engine para poder recorrerlo. Esto me llevó a preguntarme cómo generar poblaciones de forma masiva sin tener que colocar cada modelo individualmente, y Geometry Nodes era la solución perfecta. Tras un año de aprendizaje, comencé a dominarlo y pude desarrollar el principio de un generador de ciudades procedurales, esta vez implementándolo en el motor de Godot. Este proyecto me permitió explorar más a fondo esta herramienta y, una vez que tuve la primera idea de cómo aplicarla en mi trabajo, no dejaron de surgir nuevas ideas para aprovechar Geometry Nodes en todos los aspectos.</p>
                 <video width="90%" autoplay loop muted>
@@ -91,7 +97,7 @@
                     Your browser does not support the video tag.
                 </video>
                 <h3>Assets</h3>
-                <p>Mi interés por el desarrollo de videojuegos y el mundo del 3D en general me mantiene siempre activo. Por ello, de vez en cuando también me dedico al modelado orgánico, ya sea creando personajes para animarlos y moverlos en motores de videojuegos, o modelando assets para entornos, renders y, en menor medida, para impresión.</p>
+                <p>Mi interés por el desarrollo de videojuegos y el mundo del 3D en general me mantiene siempre activo. Es por eso que de vez en cuando también me dedico al modelado orgánico, ya sea creando personajes para animarlos y moverlos en motores de videojuegos, o modelando assets para entornos, renders y, en menor medida, para impresión.</p>
                 <div class="slider slider2">
                     <button class="prev additional-prev" onclick="prevSlide(2)">&#10094;</button>
                     <div class="slides">

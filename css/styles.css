@@ -1,3 +1,4 @@
+/* Estilos comunes */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -5,6 +6,58 @@ body {
     background-color: #2b2b2b;
     color: #ffffff;
     text-align: left;
+}
+
+.theme-toggle i {
+    border: none;
+    padding: 0;
+    background: none;
+    font-size: 1.5em;
+    color: white; /* Color blanco por defecto */
+}
+
+/* Tema claro */
+body.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.light-theme .main-nav {
+    background-color: #f0f0f0;
+}
+
+body.light-theme .main-nav a {
+    color: #000000;
+}
+
+body.light-theme .main-nav a:hover {
+    color: #3333ff !important;
+}
+
+body.light-theme a {
+    color: #3333ff;
+}
+
+body.light-theme a:hover {
+    color: red;
+}
+
+body.light-theme h1, 
+body.light-theme h2, 
+body.light-theme h3, 
+body.light-theme h4, 
+body.light-theme h5, 
+body.light-theme h6 {
+    color: #000000;
+}
+
+body.light-theme .theme-toggle i {
+    color: black; /* Color negro para la luna en el tema claro */
+}
+
+body.light-theme footer {
+    background-color: #f0f0f0;
+    color: #000000;
 }
 
 .header {
@@ -205,6 +258,11 @@ footer {
     background-color: #333;
     color: #ffffff;
     margin-top: 40px;
+}
+
+body.light-theme .footer {
+    background-color: #f0f0f0;
+    color: #000000;
 }
 
 .container p {
