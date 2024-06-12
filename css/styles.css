@@ -22,6 +22,7 @@ body {
 .icon {
     width: 24px;
     height: 24px;
+    vertical-align: middle; /* Añadido para centrar verticalmente */
 }
 
 /* Mostrar iconos según el tema */
@@ -94,6 +95,7 @@ body.light-theme footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center; /* Añadido para centrar verticalmente */
 }
 
 .main-nav ul li {
@@ -106,6 +108,7 @@ body.light-theme footer {
     font-weight: bold;
     padding: 10px 10px;
     display: inline-block;
+    position: relative;
 }
 
 .main-nav a:hover {
@@ -115,6 +118,12 @@ body.light-theme footer {
 .main-nav a:visited,
 .main-nav a:active {
     color: #ffffff;
+}
+
+.theme-toggle {
+    margin-left: 10px; /* Añadido para espaciar los íconos */
+    display: flex;
+    align-items: center; /* Añadido para centrar verticalmente */
 }
 
 a {
