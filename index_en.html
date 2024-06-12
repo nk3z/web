@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n4k3z</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <img src="images/cover.png" class="cover-image" alt="Cover Image">
+    </header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#experience-profesional">Exp. Professional</a></li>
+            <li><a href="#experience">Exp. Personal</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#Softwares">Softwares</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#nota-al-pie">Note</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <a href="index.html">
+                    <img src="images/spain.png" alt="Spanish Flag" class="icon">
+                </a>
+            </li>
+            <li>
+                <button id="theme-toggle" class="theme-toggle">
+                    <img id="theme-icon" src="images/sun.svg" alt="Sun Icon" class="icon">
+                </button>                
+            </li>
+        </ul>
+    </nav>  
+    <div class="container">
+        <main>
+            <section id="aboutme">
+                <h1>About Me</h1>
+                <p>"3D modeling specialist with extensive experience in the packaging industry. Notable in hard surface modeling and developing modeling tool design methods to optimize production. Passionate about exploring new opportunities in the 3D world and committed to projects".</p>
+                <p>My name is Álvaro Pérez. Throughout my professional career, I have gone through a variety of jobs that have provided me with a multitude of details that I reflect in 3D digitization. I started in the audiovisual media, especially in photography and video, and incorporated small 3D animations from the beginning. That feeling of mastering the entire creation process fascinated me and, although it seemed difficult, I decided to dedicate myself exclusively to 3D. Without a doubt, it has been the best decision I have made; I love this job.</p>
+                <p>This led me to study the degree in Audiovisual Communication at Pompeu Fabra University, where I specialized in Interactive Media. During my studies, I developed a 3D animated short and my final project was the complete development of the game design of a video game along with the technical demo. Thanks to this, I got an internship at a company dedicated to the 3D digitization of packaging, where I was later hired for five years.</p>
+            </section>                   
+            <section id="experience-profesional">
+                <h2>Professional Experience</h2>
+                <p>I started in the packaging sector as a modeler, container by container I expanded the library and learned more about the similarities of the models that would later serve me to parameterize.</p>
+                <div class="slider slider1">
+                    <button class="prev" onclick="prevSlide(1)">&#10094;</button>
+                    <div class="slides">
+                        <img src="images/slider1/image01.png" alt="Image 1">
+                        <img src="images/slider1/image02.png" alt="Image 2">
+                        <img src="images/slider1/image03.png" alt="Image 3">
+                        <img src="images/slider1/image04.png" alt="Image 4">
+                        <img src="images/slider1/image05.png" alt="Image 5">
+                    </div>
+                    <button class="next" onclick="nextSlide(1)">&#10095;</button>
+                </div>                      
+                <h3>Custom Library</h3>
+                <p>This expansion of the library allowed the reuse of models, reducing design time. I implemented organization systems, facilitating the search and selection of components for incorporation into new designs. I currently have a large library available that covers all sectors, with measurements and physical references that cover a high percentage of all industry containers.</p>
+                <video width="90%" autoplay loop muted>
+                    <source src="videos/video03.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Parametric Tools</h3>
+                <p>Although the library has many advantages, it also presents limitations, such as the lack of control over models and individualized production. This means that for large productions, even with similar models, it is necessary to duplicate and create models one by one. To solve this limitation, I looked for a way to optimize production and discovered parametric modeling with Blender's Geometry Nodes. This tool allowed me to parameterize common containers and thus create tools to generate complete models more efficiently.</p>
+                <video width="90%" autoplay loop muted>
+                    <source src="videos/tools/video01.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>This approach transformed our production process, allowing us to generate hundreds of models, with more accuracy due to their parametric nature and lighter weight due to optimization, always replacing the manual process when possible and making it possible for other non-specialized workers to generate models. As a result, our team's efficiency and productivity increased significantly.</p>
+                <p>I also developed specific tools to facilitate traditional modeling and handle repetitive and tedious tasks, which can be used at any time. For example, an unwrap that centers the UV and adjusts it to a square shape, very useful for customization areas, and a generator of parametrized threads and counter-threads.</p>
+                <video width="90%" autoplay loop muted>
+                    <source src="videos/tools2/video01.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Export Addon</h3>
+                <p>Another tool I developed to solve the mass export problem is an addon for Blender created in Python.</p>
+                <a href="https://github.com/nk3z/">GLTF Export</a>
+                <br>
+                <img src="images/addon.png" alt="Addon Image">                            
+                <h3>Renders</h3>
+                <p>In addition to model production, I also performed other tasks, such as renders for product thumbnails and animated renders for promotions and events. These renders, which were not a priority, were done with less time and effort, seeking effective impact without requiring great dedication. For example, these animated GIFs for mailing.</p>
+                <div class="video-slider-container">
+                    <button class="prev" data-index="5">&#10094;</button>
+                    <div class="video-slider">
+                        <video id="videoPlayer5" controls autoplay muted width="90%">
+                            <source src="videos/promos/video01.mp4" type="video/mp4">
+                            <source src="videos/promos/video01.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <button class="next" data-index="5">&#10095;</button>
+                </div>
+            </section>
+            <section id="experience">
+                <h2>Personal Experience</h2>
+                <p>As I mentioned at the beginning, my personal experience is closely linked to my professional experience. An example of this is my study of parametric modeling with Geometry Nodes, which, given its difficulty, I didn't know how to learn or how to apply in my work. Therefore, I looked for a personal project where I could apply this learning and motivate myself.</p>
+                <h3>Parametric Cities</h3>
+                <p>At that time, I was recreating my childhood village to scale, using Unreal Engine to be able to explore it. This led me to wonder how to generate populations en masse without having to place each model individually, and Geometry Nodes was the perfect solution. After a year of learning, I began to master it and was able to develop the principle of a procedural city generator, this time implementing it in the Godot engine. This project allowed me to explore this tool more deeply, and once I had the first idea of how to apply it in my work, new ideas continued to emerge to take advantage of Geometry Nodes in all aspects.</p>
+                <video width="90%" autoplay loop muted>
+                    <source src="videos/nodes/video01.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Assets</h3>
+                <p>My interest in video game development and the 3D world, in general, keeps me always active. That's why from time to time I also dedicate myself to organic modeling, either creating characters to animate and move them in game engines or modeling assets for environments, renders, and, to a lesser extent, for printing.</p>
+                <div class="slider slider2">
+                    <button class="prev additional-prev" onclick="prevSlide(2)">&#10094;</button>
+                    <div class="slides">
+                        <img src="images/slider2/image01.png" alt="Image 1">
+                        <img src="images/slider2/image02.png" alt="Image 2">
+                        <img src="images/slider2/image03.jpg" alt="Image 3">
+                    </div>
+                    <button class="next additional-next" onclick="nextSlide(2)">&#10095;</button>
+                </div>
+                <h3>Game Engines</h3>
+                <p>In addition to modeling, my other passion is game engines. Not so much for the games themselves, but for the interactivity they offer. My first contact was with Unity in the demo of the <a href="https://nakez.itch.io/cryptophasia">TFG</a>, but that was a long time ago and does not reflect my current knowledge. I have spent more time in Unreal without an apparent project, where through blueprints I was able to bring characters and environments to life. However, when I started working with Geometry Nodes, I discovered Godot and, like Blender, I fell in love with its potential. Currently, it is where I develop my projects. Although my programming knowledge is basic, I have been able to create all the necessary scripts with the help of ChatGPT, just as I developed the export addon and this <a href="https://github.com/nk3z/">page</a>.</p>
+                <video width="90%" autoplay loop muted>
+                    <source src="videos/engines/video01.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <h3>In Production</h3>
+                <p><strong>Project Evaluation and Planning:</strong> As the production manager, I evaluate the client's product to be digitized in detail. This includes determining the project's difficulty, calculating delivery dates, and planning the appropriate strategy for its execution.</p>
+                <p><strong>Methodology Adapted to Difficulty:</strong> I analyze different ways of approaching production based on the product's complexity. I select the most effective methodology to ensure the process is optimal and meets the established deadlines.</p>
+                <p><strong>Innovation and Scalability:</strong> I always look for new ways to improve and scale production. I implement methods and techniques that optimize efficiency and ensure that each product is done correctly.</p>
+                <p><strong>Quality Control:</strong> I ensure that all delivered products meet the required quality standards. I conduct detailed reviews at each stage of the process to guarantee the final result meets expectations.</p>
+                <p><strong>Production Organization and Backup:</strong> I keep production well organized and backed up periodically. This ensures that all information is always accessible and up-to-date, facilitating its use for future projects or queries.</p>
+                <h3>In Modeling</h3>
+                <p><strong>Modeling:</strong> This is the area where my experience expands the most, as can already be seen.</p>
+                <p><strong>Shaders:</strong> Just like parametric geometry, creating parametric shaders is where I focus the most. I prefer to have a library of parametric shaders instead of using traditional painting, although if I need it, I use Substance Painter, Armorpaint, or Blender itself.</p>
+                <p><strong>Texturing:</strong> Packaging in general has many customization areas, so part of my daily work is generating various types of UV maps. For this, I have developed specific tools dedicated to this task.</p>
+                <p><strong>Lighting and Camera:</strong> Due to my experience working with cameras and my audiovisual studies, I have extensive knowledge of lighting and framing that I apply to the 3D environment.</p>
+                <p><strong>Rendering:</strong> Optimizing render times and adjusting renders to maximize quality in the shortest possible time is another area I have studied in depth.</p>
+                <p><strong>Animation:</strong> Although I started doing animations, today it is the part that interests me the least.</p>                
+                <section id="Softwares">
+                    <section id="Softwares">
+                        <h2>Softwares</h2>
+                        <div class="software-group">
+                            <div class="software-stars">
+                                <span class="stars">★★★</span>
+                                <ul class="softwares-logos">
+                                    <li><img src="images/sofwares/blenderlogo.png" alt="Blender Logo"></li>
+                                    <li><img src="images/sofwares/godotlogo.png" alt="Godot Logo"></li>
+                                    <li><img src="images/sofwares/kritalogo.png" alt="Krita Logo"></li>
+                                    <li><img src="images/sofwares/inkscapelogo.png" alt="Inkscape Logo"></li>
+                                    <li><img src="images/sofwares/gimplogo.png" alt="Gimp Logo"></li>
+                                </ul>
+                            </div>
+                            <div class="software-stars">
+                                <span class="stars">★★</span>
+                                <ul class="softwares-logos">
+                                    <li><img src="images/sofwares/uelogo.png" alt="Unreal Engine Logo"></li>
+                                    <li><img src="images/sofwares/splogo.svg" alt="Substance Painter Logo"></li>
+                                    <li><img src="images/sofwares/unitylogo.png" alt="Unity Logo"></li>
+                                    <li><img src="images/sofwares/zbrushlogo.png" alt="ZBrush Logo"></li>
+                                    <li><img src="images/sofwares/mayalogo.png" alt="Maya Logo"></li>
+                                    <li><img src="images/sofwares/armorpaintlogo.png" alt="Armorpaint Logo"></li>
+                                </ul>
+                            </div>
+                            <div class="software-stars">
+                                <span class="stars">★</span>
+                                <ul class="softwares-logos">
+                                    <li><img src="images/sofwares/3dslogo.webp" alt="3ds Max Logo"></li>
+                                    <li><img src="images/sofwares/pslogo.png" alt="Adobe Photoshop Logo"></li>
+                                    <li><img src="images/sofwares/aelogo.png" alt="After Effects Logo"></li>
+                                    <li><img src="images/sofwares/ailogo.png" alt="Adobe Illustrator Logo"></li>
+                                    <li><img src="images/sofwares/davincilogo.png" alt="DaVinci Resolve Logo"></li>
+                                    <li><img src="images/sofwares/fcpxlogo.png" alt="Final Cut Pro X Logo"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>                    
+            <section id="education">
+                <h2>Education</h2>
+                <div>
+                    <img src="images/upflogo.webp" alt="UPF Logo">
+                    <br>Bachelor's Degree in Audiovisual Communication, Interactive Media 2014 - 2018</br>
+                </div>
+            </section>
+            <section id="nota-al-pie">
+                <h3>Note</h3>
+                <p>The portfolio is still under construction and most of the multimedia content comes from previous works that were not created with the intention of being shown. Due to my work dedication, I have never had the time or need to present them with higher quality. However, depending on the offer, I am available to perform any test offering the quality it deserves.</p>
+                <p>On the other hand, I have not mentioned dates, companies, or recommendations. For more information about my work experience and to contact me, you can visit my LinkedIn profile or send me an email.</p>
+                <p>Regards!</p>                
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <a href="https://www.linkedin.com/in/alvaroperez3d/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/sofwares/inlogo.png" alt="LinkedIn">
+                </a>
+                <a href="mailto:nk3z@proton.me">
+                    <img src="images/sofwares/mail.png" alt="Send Email">
+                </a>
+            </section>                    
+        </main>
+        <footer>
+            <p>n4k3z© 2024</p>
+        </footer>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
