@@ -16,6 +16,14 @@ body {
     color: white; /* Color blanco por defecto */
 }
 
+/* Eliminar borde y relleno */
+.fa-moon, .fa-sun {
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    color: inherit !important;
+}
+
 /* Tema claro */
 body.light-theme {
     background-color: #ffffff;
