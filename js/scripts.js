@@ -52,11 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     top: offsetPosition,
                     behavior: 'smooth'
                 });
-
-                // Remover la clase active de todos los enlaces
-                navLinks.forEach(navLink => navLink.classList.remove('active'));
-                // Agregar la clase active al enlace seleccionado
-                this.classList.add('active');
             }
         });
     });

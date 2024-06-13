@@ -46,15 +46,15 @@ body.light-theme .main-nav a {
 }
 
 body.light-theme .main-nav a:hover {
-    color: #3333ff !important;
+    color: rgb(0, 0, 0) !important;
 }
 
 body.light-theme a {
-    color: #3333ff;
+    color: #85ABED;
 }
 
 body.light-theme a:hover {
-    color: red;
+    color: #85ABED;
 }
 
 body.light-theme h1, 
@@ -136,10 +136,11 @@ body.light-theme footer {
 }
 
 .main-nav a:hover {
-    color: #85ABED !important;
+    color: #ffffff !important;
 }
 
 .main-nav a:visited,
+.main-nav a:focus,
 .main-nav a:active {
     color: #ffffff; /* Cambiado a blanco cuando se selecciona */
 }
@@ -160,7 +161,7 @@ a {
 }
 
 a:hover {
-    color: red;
+    color: #85ABED;
     text-decoration: none;
     font-weight: bold;
 }
@@ -380,5 +381,10 @@ body.light-theme .footer {
     video {
         width: 100%;
         height: auto;
+    }
+
+    /* Desactivar efecto hover para móviles */
+    .main-nav a:hover {
+        color: inherit;
     }
 }
