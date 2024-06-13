@@ -22,7 +22,7 @@ body {
 .icon {
     width: 24px;
     height: 24px;
-    vertical-align: middle;
+    vertical-align: middle; /* Añadido para centrar verticalmente */
 }
 
 /* Mostrar iconos según el tema */
@@ -65,6 +65,11 @@ body.light-theme h6 {
     color: #000000;
 }
 
+body.light-theme footer {
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
 .header {
     width: 100%;
     overflow: hidden;
@@ -90,7 +95,7 @@ body.light-theme h6 {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centra los elementos del menú */
     align-items: center;
     flex-wrap: wrap;
 }
@@ -101,7 +106,7 @@ body.light-theme h6 {
 
 .main-nav ul .menu-items {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centra los elementos del menú */
     flex-grow: 1;
 }
 
@@ -111,7 +116,7 @@ body.light-theme h6 {
 }
 
 .right-align a, .right-align button {
-    margin-left: 10px;
+    margin-left: 10px; /* Espaciado entre el botón de idioma y el de tema */
 }
 
 .main-nav a {
@@ -130,6 +135,12 @@ body.light-theme h6 {
 .main-nav a:visited,
 .main-nav a:active {
     color: #ffffff;
+}
+
+.theme-toggle {
+    margin-left: 10px; /* Añadido para espaciar los íconos */
+    display: flex;
+    align-items: center; /* Añadido para centrar verticalmente */
 }
 
 a {
@@ -195,7 +206,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     display: flex;
     justify-content: center;
-    height: 300px;
+    height: 300px; /* Ajusta esto a la altura de tus videos */
 }
 
 .video-slider {
@@ -207,6 +218,16 @@ video {
     margin: 20px auto;
     max-width: 100%;
     max-height: 100%;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
 }
 
 .prev, .next {
@@ -304,12 +325,20 @@ body.light-theme .footer {
 
 @media (max-width: 768px) {
     .main-nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center; /* Centra los elementos del menú en móviles */
     }
     
     .main-nav ul li {
-        margin: 5px;
+        margin: 10px 0; /* Espaciado entre elementos del menú en móviles */
+    }
+    
+    .right-align {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .right-align a, .right-align button {
+        margin: 5px 0;
     }
 }
