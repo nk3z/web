@@ -12,24 +12,25 @@
     </header>
     <nav class="main-nav">
         <ul>
-            <li><a href="#aboutme">Sobre mí</a></li>
-            <li><a href="#experience-profesional">Exp. Profesional</a></li>
-            <li><a href="#experience">Exp. Personal</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#Softwares">Softwares</a></li>
-            <li><a href="#education">Educación</a></li>
-            <li><a href="#nota-al-pie">Nota</a></li>
-            <li><a href="#contact">Contacto</a></li>
-            <li>
-                <a href="index_en.html">
+            <div class="menu-items">
+                <li><a href="#aboutme">Sobre mí</a></li>
+                <li><a href="#experience-profesional">Exp. Profesional</a></li>
+                <li><a href="#experience">Exp. Personal</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#Softwares">Softwares</a></li>
+                <li><a href="#education">Educación</a></li>
+                <li><a href="#nota-al-pie">Nota</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </div>
+            <li class="right-align">
+                <a href="index_en.html" class="language-switch" data-lang="en">
                     <img src="images/uk.svg" alt="English Flag" class="icon">
                 </a>
-            </li>
-            <li>
                 <button id="theme-toggle" class="theme-toggle">
                     <img id="theme-icon" src="images/sun.svg" alt="Sun Icon" class="icon">
-                </button>                
-            </li>
+                </button>
+            </li>            
+            </div>
         </ul>
     </nav>    
     <div class="container">
@@ -67,19 +68,19 @@
                 <h3>Biblioteca personalizada</h3>
                 <p>Esta ampliación de la biblioteca permitió reutilizar los modelos reduciendo el tiempo de diseño. Implementé sistemas de organización, facilitando la búsqueda y selección de componentes para su incorporación en nuevos diseños. Actualmente tengo a disposición una biblioteca de gran tamaño que cubre todos los sectores, con medidas y referencias físicas que cubren un porcentaje alto de todos los envases de la industria.</p>
                 <video width="90%" autoplay loop muted>
-                    <source src="videos/video03.mp4" type="video/mp4">
+                    <source src="videos/library.webm" type="video/webm">
                     Your browser does not support the video tag.
                 </video>
                 <h3>Herramientas paramétricas</h3>
                 <p>Aunque la biblioteca tiene muchas ventajas, también presenta limitaciones, como la falta de control sobre los modelos y la producción individualizada. Esto hace que, para grandes producciones aún con modelos similares, sea necesario duplicar y crear modelos uno por uno. Para solucionar esta limitación, busqué una manera de optimizar la producción y descubrí el modelado parametrico con Geometry Nodes de Blender. Esta herramienta me permitió parametrizar envases comunes y así crear herramientas para generar modelos completos de forma más eficiente.</p>
                 <video width="90%" autoplay loop muted>
-                    <source src="videos/tools/video01.mp4" type="video/mp4">
+                    <source src="videos/tools.webm" type="video/webm">
                     Your browser does not support the video tag.
                 </video>
                 <p>Este enfoque transformó nuestro proceso de producción, permitiendo generar cientos de modelos, con más exactitud debido a su carácter paramétrico y un menor peso de los objetos por su optimización, sustituyendo siempre que sea posible el proceso manual y haciendo posible que otros trabajadores no especializados puedan generar modelos. Como resultado, la eficiencia y productividad de nuestro equipo aumentaron significativamente.</p>
                 <p>También desarrollé herramientas específicas para facilitar el modelado tradicional y manejar tareas repetitivas y tediosas, que se pueden utilizar en cualquier momento. Por ejemplo, un unwrap que centra el UV y lo ajusta a una forma cuadrada, muy útil para las zonas de personalización, y un generador de roscas y contrarroscas parametrizadas.</p>
                 <video width="90%" autoplay loop muted>
-                    <source src="videos/tools2/video01.mp4" type="video/mp4">
+                    <source src="videos/tools2.webm" type="video/webm">
                     Your browser does not support the video tag.
                 </video>
                 <h3>Addon de exportación</h3>
@@ -93,8 +94,7 @@
                     <button class="prev" data-index="5">&#10094;</button>
                     <div class="video-slider">
                         <video id="videoPlayer5" controls autoplay muted width="90%">
-                            <source src="videos/promos/video01.mp4" type="video/mp4">
-                            <source src="videos/promos/video01.webm" type="video/webm">
+                            <source src="videos/promo01.webm" type="video/webm">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -107,7 +107,7 @@
                 <h3>Ciudades paramétricas</h3>
                 <p>En ese momento, estaba recreando mi pueblo de la infancia a escala, utilizando Unreal Engine para poder recorrerlo. Esto me llevó a preguntarme cómo generar poblaciones de forma masiva sin tener que colocar cada modelo individualmente, y Geometry Nodes era la solución perfecta. Tras un año de aprendizaje, comencé a dominarlo y pude desarrollar el principio de un generador de ciudades procedurales, esta vez implementándolo en el motor de Godot. Este proyecto me permitió explorar más a fondo esta herramienta y, una vez que tuve la primera idea de cómo aplicarla en mi trabajo, no dejaron de surgir nuevas ideas para aprovechar Geometry Nodes en todos los aspectos.</p>
                 <video width="90%" autoplay loop muted>
-                    <source src="videos/nodes/video01.mp4" type="video/mp4">
+                    <source src="videos/nodes.webm" type="video/webm">
                     Your browser does not support the video tag.
                 </video>
                 <h3>Assets</h3>
@@ -124,7 +124,7 @@
                 <h3>Motores de videojuegos</h3>
                 <p>Además del modelado, mi otra pasión son los motores de videojuegos. No tanto por los videojuegos en sí, sino por la interactividad que ofrecen. Mi primer contacto fue con Unity en la demo del <a href="https://nakez.itch.io/cryptophasia">TFG</a>, pero eso fue hace bastante tiempo y no refleja mi conocimiento actual. He pasado más tiempo en Unreal sin un proyecto aparente, donde a través de blueprints pude dar vida a personajes y entornos. Sin embargo, cuando comencé a trabajar con Geometry Nodes, descubrí Godot y, al igual que con Blender, me enamoré de su potencial. Actualmente, es donde desarrollo mis proyectos. Aunque mis nociones de programación son básicas, he podido crear todos los scripts necesarios con la ayuda de ChatGPT, al igual que desarrollé el addon de exportación y esta <a href="https://github.com/nk3z/">pagina</a>.</p>
                 <video width="90%" autoplay loop muted>
-                    <source src="videos/engines/video01.mp4" type="video/mp4">
+                    <source src="videos/engines.webm" type="video/webm">
                     Your browser does not support the video tag.
                 </video>
             </section>

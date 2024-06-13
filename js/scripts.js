@@ -20,6 +20,40 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    // Guardar la posición de desplazamiento antes de cambiar de idioma
+    document.querySelectorAll('.language-switch').forEach(link => {
+        link.addEventListener('click', function (e) {
+            const scrollPosition = window.scrollY;
+            localStorage.setItem('scrollPosition', scrollPosition);
+        });
+    });
+
+    // Restaurar la posición de desplazamiento al cargar la página
+    const scrollPosition = localStorage.getItem('scrollPosition');
+    if (scrollPosition) {
+        window.scrollTo(0, parseInt(scrollPosition, 10));
+        localStorage.removeItem('scrollPosition');
+    }
+
+    // Ajustar el desplazamiento para que el título de la sección no quede tapado por el menú
+    document.querySelectorAll('.main-nav a').forEach(link => {
+        link.addEventListener('click', function (e) {
+            if (!this.classList.contains('language-switch')) { // Añadir esta línea
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                const headerOffset = document.querySelector('.main-nav').offsetHeight;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
     // Resto del código existente
     const links = document.querySelectorAll("a:not(.main-nav a)");
 
@@ -54,12 +88,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const videoPlayer = document.getElementById("videoPlayer5");
     const videoSources = [
-        "videos/promos/video01.mp4",
-        "videos/promos/video02.mp4",
-        "videos/promos/video03.mp4",
-        "videos/promos/video04.mp4",
-        "videos/promos/video05.mp4",
-        "videos/promos/video06.webm",
+        "videos/promo01.webm",
+        "videos/promo02.webm",
+        "videos/promo03.webm",
+        "videos/promo04.webm",
+        "videos/promo05.webm",
+        "videos/promo06.webm",
     ];
     let currentVideoIndex = 0;
 
