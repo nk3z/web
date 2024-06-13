@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Ajustar el desplazamiento para que el título de la sección no quede tapado por el menú
     document.querySelectorAll('.main-nav a').forEach(link => {
         link.addEventListener('click', function (e) {
-            if (!this.classList.contains('language-switch')) { // Añadir esta línea
+            if (!this.classList.contains('language-switch')) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href').substring(1);
                 const targetElement = document.getElementById(targetId);
@@ -54,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Resto del código existente
     const links = document.querySelectorAll("a:not(.main-nav a)");
 
     links.forEach(function (link) {
@@ -63,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const sliders = document.querySelectorAll(".slider");
-    sliders.forEach((slider, index) => {
+    sliders.forEach((slider) => {
         let currentIndex = 0;
         const slides = slider.querySelector(".slides");
 
