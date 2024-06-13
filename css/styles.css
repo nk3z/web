@@ -124,6 +124,8 @@ body.light-theme footer {
 
 .right-align a, .right-align button {
     margin-left: 5px; /* Reducido de 10px a 5px */
+    margin-top: 2px; /* Reducido de 10px a 2px */
+    margin-bottom: 2px; /* Reducido de 10px a 2px */
 }
 
 .main-nav a {
@@ -146,6 +148,8 @@ body.light-theme footer {
 
 .theme-toggle {
     margin-left: 5px; /* Reducido de 10px a 5px */
+    margin-top: 2px; /* Reducido de 10px a 2px */
+    margin-bottom: 2px; /* Reducido de 10px a 2px */
     display: flex;
     align-items: center; /* Añadido para centrar verticalmente */
 }
@@ -358,7 +362,7 @@ body.light-theme .footer {
     }
     
     .right-align a, .right-align button {
-        margin: 5px; /* Ajusta el margen entre los elementos de la derecha en móviles */
+        margin: 2px; /* Ajusta el margen entre los elementos de la derecha en móviles */
     }
 
     .main-nav {
@@ -376,3 +380,5 @@ body.light-theme .footer {
     video {
         width: 100%;
         height: auto;
+    }
+}
