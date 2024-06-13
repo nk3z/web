@@ -332,25 +332,33 @@ body.light-theme .footer {
 
 @media (max-width: 768px) {
     .main-nav ul {
-        flex-direction: column;
+        flex-direction: row; /* Asegura que los elementos del menú se mantengan en una fila en móviles */
         align-items: center; /* Centra los elementos del menú en móviles */
+        flex-wrap: wrap; /* Permite que los elementos del menú se envuelvan en líneas múltiples si es necesario */
         width: 100%; /* Asegura que el menú ocupe todo el ancho del contenedor en móviles */
     }
     
     .main-nav ul li {
-        margin: 10px 0; /* Espaciado entre elementos del menú en móviles */
-        width: 100%; /* Asegura que cada elemento ocupe todo el ancho del contenedor */
+        margin: 5px; /* Reduce el margen entre los elementos del menú en móviles */
         text-align: center; /* Centra el texto de cada elemento */
+    }
+
+    .main-nav ul .menu-items {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* Permite que los elementos del menú se envuelvan en móviles */
+        width: 100%; /* Asegura que los elementos del menú ocupen todo el ancho del contenedor en móviles */
     }
     
     .right-align {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        width: 100%; /* Asegura que los elementos de la derecha ocupen todo el ancho del contenedor en móviles */
+        margin-left: auto;
+        width: auto; /* Ajusta la anchura de los elementos de la derecha en móviles */
     }
     
     .right-align a, .right-align button {
-        margin: 5px 0; /* Espaciado entre los elementos de la derecha en móviles */
+        margin: 5px 10px; /* Ajusta el margen entre los elementos de la derecha en móviles */
     }
 
     .main-nav {
