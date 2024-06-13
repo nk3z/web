@@ -54,7 +54,7 @@ body.light-theme a {
 }
 
 body.light-theme a:hover {
-    color: #85ABED;
+    color: #85ABED !important;
 }
 
 body.light-theme h1, 
@@ -136,7 +136,7 @@ body.light-theme footer {
 }
 
 .main-nav a:hover {
-    color: #ffffff !important;
+    color: #85ABED !important;
 }
 
 .main-nav a:visited,
@@ -385,6 +385,6 @@ body.light-theme .footer {
 
     /* Desactivar efecto hover para móviles */
     .main-nav a:hover {
-        color: inherit;
+        color: inherit !important;
     }
 }
