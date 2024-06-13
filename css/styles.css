@@ -85,7 +85,7 @@ body.light-theme footer {
 
 .main-nav {
     background-color: #333;
-    padding: 10px 0;
+    padding: 5px 0; /* Reducido de 10px a 5px */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -106,7 +106,7 @@ body.light-theme footer {
 }
 
 .main-nav ul li {
-    margin: 5px;
+    margin: 2px; /* Reducido de 5px a 2px */
 }
 
 .main-nav ul .menu-items {
@@ -123,14 +123,14 @@ body.light-theme footer {
 }
 
 .right-align a, .right-align button {
-    margin-left: 10px; /* Espaciado entre el botón de idioma y el de tema */
+    margin-left: 5px; /* Reducido de 10px a 5px */
 }
 
 .main-nav a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 10px;
+    padding: 5px 10px; /* Reducido de 10px 10px a 5px 10px */
     display: inline-block;
     position: relative;
 }
@@ -145,7 +145,7 @@ body.light-theme footer {
 }
 
 .theme-toggle {
-    margin-left: 10px; /* Añadido para espaciar los íconos */
+    margin-left: 5px; /* Reducido de 10px a 5px */
     display: flex;
     align-items: center; /* Añadido para centrar verticalmente */
 }
@@ -339,7 +339,7 @@ body.light-theme .footer {
     }
     
     .main-nav ul li {
-        margin: 5px; /* Reduce el margen entre los elementos del menú en móviles */
+        margin: 2px; /* Reducido el margen entre los elementos del menú en móviles */
         text-align: center; /* Centra el texto de cada elemento */
     }
 
@@ -358,7 +358,7 @@ body.light-theme .footer {
     }
     
     .right-align a, .right-align button {
-        margin: 5px 10px; /* Ajusta el margen entre los elementos de la derecha en móviles */
+        margin: 5px; /* Ajusta el margen entre los elementos de la derecha en móviles */
     }
 
     .main-nav {
@@ -376,5 +376,3 @@ body.light-theme .footer {
     video {
         width: 100%;
         height: auto;
-    }
-}
