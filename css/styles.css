@@ -124,8 +124,6 @@ body.light-theme footer {
 
 .right-align a, .right-align button {
     margin-left: 5px; /* Reducido de 10px a 5px */
-    margin-top: 2px; /* Reducido de 10px a 2px */
-    margin-bottom: 2px; /* Reducido de 10px a 2px */
 }
 
 .main-nav a {
@@ -143,13 +141,15 @@ body.light-theme footer {
 
 .main-nav a:visited,
 .main-nav a:active {
-    color: #ffffff;
+    color: #ffffff; /* Cambiado a blanco cuando se selecciona */
+}
+
+.main-nav a.active {
+    color: #85ABED !important; /* Color azul para la sección activa */
 }
 
 .theme-toggle {
     margin-left: 5px; /* Reducido de 10px a 5px */
-    margin-top: 2px; /* Reducido de 10px a 2px */
-    margin-bottom: 2px; /* Reducido de 10px a 2px */
     display: flex;
     align-items: center; /* Añadido para centrar verticalmente */
 }
@@ -362,7 +362,7 @@ body.light-theme .footer {
     }
     
     .right-align a, .right-align button {
-        margin: 2px; /* Ajusta el margen entre los elementos de la derecha en móviles */
+        margin: 5px; /* Ajusta el margen entre los elementos de la derecha en móviles */
     }
 
     .main-nav {
