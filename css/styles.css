@@ -6,6 +6,7 @@ body {
     background-color: #2b2b2b;
     color: #ffffff;
     text-align: left;
+    overflow-x: hidden; /* Para evitar el desbordamiento horizontal */
 }
 
 .theme-toggle {
@@ -88,6 +89,8 @@ body.light-theme footer {
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%; /* Asegura que el nav ocupe el ancho completo */
+    box-sizing: border-box;
 }
 
 .main-nav ul {
@@ -95,9 +98,11 @@ body.light-theme footer {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Centra los elementos del menú */
+    justify-content: space-between; /* Espacio entre los elementos del menú */
     align-items: center;
     flex-wrap: wrap;
+    width: 100%; /* Asegura que el ul ocupe el ancho completo */
+    box-sizing: border-box;
 }
 
 .main-nav ul li {
@@ -108,11 +113,13 @@ body.light-theme footer {
     display: flex;
     justify-content: center; /* Centra los elementos del menú */
     flex-grow: 1;
+    flex-wrap: wrap; /* Permite que los elementos del menú se envuelvan en líneas múltiples si es necesario */
 }
 
 .main-nav ul .right-align {
     display: flex;
     align-items: center;
+    margin-left: auto; /* Empuja los elementos a la derecha */
 }
 
 .right-align a, .right-align button {
@@ -327,18 +334,39 @@ body.light-theme .footer {
     .main-nav ul {
         flex-direction: column;
         align-items: center; /* Centra los elementos del menú en móviles */
+        width: 100%; /* Asegura que el menú ocupe todo el ancho del contenedor en móviles */
     }
     
     .main-nav ul li {
         margin: 10px 0; /* Espaciado entre elementos del menú en móviles */
+        width: 100%; /* Asegura que cada elemento ocupe todo el ancho del contenedor */
+        text-align: center; /* Centra el texto de cada elemento */
     }
     
     .right-align {
         flex-direction: column;
         align-items: center;
+        width: 100%; /* Asegura que los elementos de la derecha ocupen todo el ancho del contenedor en móviles */
     }
     
     .right-align a, .right-align button {
-        margin: 5px 0;
+        margin: 5px 0; /* Espaciado entre los elementos de la derecha en móviles */
+    }
+
+    .main-nav {
+        padding: 5px 0; /* Ajusta el padding para que ocupe menos espacio en móviles */
+    }
+
+    .container {
+        padding: 10px; /* Reduce el padding en móviles */
+    }
+
+    .video-slider-container {
+        height: auto; /* Ajusta la altura de los videos en móviles */
+    }
+
+    video {
+        width: 100%;
+        height: auto;
     }
 }

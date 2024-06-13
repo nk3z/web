@@ -92,7 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "videos/promo03.webm",
         "videos/promo04.webm",
         "videos/promo05.webm",
-        "videos/promo06.webm",
     ];
     let currentVideoIndex = 0;
 
